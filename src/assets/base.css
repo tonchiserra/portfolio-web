@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;400;500;600;700;800;900&display=swap');
+
+:root {
+  --main-color: #1572B6;
+  --second-color: #F2F9FF;
+  --third-color: #B9DCFF;
+  --gray-color-100: #f4f4f4;
+  --gray-color-300: #c4c4c4;
+  --text-color: #222;
+  --second-text-color: #444;
+  --font-heading-family: "Raleway", sans-serif;
+  --font-family: "Raleway", sans-serif;
+  --content-width: 1000px;
+  --mobile-breakpoint: 680px;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: var(--font-family);
+  font-size: 10px;
+  color: var(--text-color);
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  position: relative;
+  background: #fff;
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+h1 {
+  font-family: var(--font-heading-family);
+  line-height: 1;
+  font-size: 7rem;
+  font-weight: 800;
+}
+
+h2 {
+  font-family: var(--font-heading-family);
+  line-height: 1;
+  font-size: 3.2rem;
+  font-weight: 600;
+  color: var(--second-text-color);
+}
+
+h3 {
+  font-family: var(--font-heading-family);
+  line-height: 1;
+  font-size: 4.8rem;
+}
+
+.button,
+button {
+  cursor: pointer;
+  position: relative;
+  font-weight: bold;
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 4rem;
+  padding: 0 2rem;
+  border-radius: 100px;
+  box-shadow: 0px 4px 16px 0px rgba(34, 34, 34, 0.10);
+  background: #fff;
+  border: none;
+}
+
+button.transparent {
+  background-color: transparent;
+  box-shadow: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+  transition: all 300ms ease;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+a:hover {
+  color: var(--main-color);
+}
+
+a.underline {
+  color: var(--main-color);
+  text-decoration: underline;
+}
+
+a.underline:hover {
+  color: var(--third-color);
+}
+
+.page-width {
+  width: 100%;
+  max-width: var(--content-width);
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 680px) {
+  .page-width {
+    padding: 20px;
+  }
+}
