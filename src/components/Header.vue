@@ -1,15 +1,9 @@
-<script setup lang="ts">
-import { computed } from 'vue';
-
-const menuVisible = computed(() => window.innerWidth > 680 ? 'menu-visible' : '')
-</script>
-
 <template>
   <header>
     <div class="page-width header-container">
       <a href="/" class="logotype">GS</a>
 
-      <dialog id="menu" :class="menuVisible">
+      <dialog id="menu" class="menu">
         <form method="dialog">
           <button class="menu-btn transparent">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -45,7 +39,7 @@ header {
   top: 0;
   left: 0;
   width: 100vw;
-  z-index: 1;
+  z-index: 3;
 
   .menu-btn {
     display: none;
@@ -60,36 +54,36 @@ header {
     }
   }
 
-  .menu-visible {
+  .menu {
     display: block;
     position: unset;
     background: unset;
     border: unset;
-  }
+  
+    @media screen and (max-width: 680px) {
+      border: unset;
+      width: 70dvw;
+      height: 100%;
+      right: 0;
+      left: unset;
+      transition: all 300ms ease;
+      animation: modal 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86) both alternate;
+      max-height: unset;
+      transform: translateX(75vw);
 
-  dialog:not(.menu-visible) {
-    border: unset;
-    width: 70dvw;
-    height: 100%;
-    right: 0;
-    left: unset;
-    transition: all 300ms ease;
-    animation: modal 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86) both alternate;
-    max-height: unset;
-    transform: translateX(75vw);
+      nav ul {
+        flex-direction: column;
+      }
 
-    nav ul {
-      flex-direction: column;
+      form {
+        padding: 2rem 2rem 1rem;
+      }
+
+      &::backdrop {
+        background: #000A;
+      }
+
     }
-
-    form {
-      padding: 2rem 2rem 1rem;
-    }
-
-    &::backdrop {
-      background: #000A;
-    }
-
   }
 
   @keyframes modal {
@@ -110,6 +104,7 @@ header {
   .logotype {
     font-size: 4rem;
     color: var(--main-color);
+    font-weight: 700;
 
     &:hover {
       transform: scale(1.2);

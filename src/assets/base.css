@@ -10,7 +10,7 @@
   --second-text-color: #444;
   --font-heading-family: "Raleway", sans-serif;
   --font-family: "Raleway", sans-serif;
-  --content-width: 1000px;
+  --content-width: 1200px;
   --mobile-breakpoint: 680px;
 }
 
@@ -44,6 +44,7 @@ p {
   font-weight: 500;
   color: var(--second-text-color);
   font-size: 1.6rem;
+  line-height: 24px;
 }
 
 h1 {
@@ -101,7 +102,7 @@ a {
   color: var(--text-color);
   transition: all 300ms ease;
   font-size: 1.6rem;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 a:hover {
@@ -129,12 +130,12 @@ a.disabled {
   margin: 0 auto;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1200px) {
   .page-width {
     padding: 20px;
   }
 }
 
 .side-projects .splide__track {
-  padding-top: 140px !important;
+  padding-top: 160px !important;
 }

@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import Item from "./Item.vue";
+</script>
+
 <template>
   <div class="experience-snippet">
     <div class="company">
@@ -21,33 +25,13 @@
       </div>
 
       <h4>Web Dev & Shopify Dev</h4>
-      <div class="item">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17" fill="none">
-          <path d="M6.61692 16.2979L0 9.63128L2.94249 6.66667L6.61692 10.3792L16.9083 0L19.8507 2.96461L6.61692 16.2979Z" fill="#1572B6"/>
-        </svg>
-        <p>I was working in the support area solving technical problems of different clients with Shopify Stores.</p>
-      </div>
+      <Item>I was working in the support area solving technical problems of different clients with Shopify Stores.</Item>
 
-      <div class="item">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17" fill="none">
-          <path d="M6.61692 16.2979L0 9.63128L2.94249 6.66667L6.61692 10.3792L16.9083 0L19.8507 2.96461L6.61692 16.2979Z" fill="#1572B6"/>
-        </svg>
-        <p>I created different components using top web technologies like Liquid, Vue.js, TypeScript and Sass.</p>
-      </div>
+      <Item>I created different components using top web technologies like Liquid, Vue.js, TypeScript and Sass.</Item>
 
-      <div class="item">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17" fill="none">
-          <path d="M6.61692 16.2979L0 9.63128L2.94249 6.66667L6.61692 10.3792L16.9083 0L19.8507 2.96461L6.61692 16.2979Z" fill="#1572B6"/>
-        </svg>
-        <p>I learned how to create and deploy backend developments like automations or AWS Lambdas using Node.js and Express.</p>
-      </div>
+      <Item>I learned how to create and deploy backend developments like automations or AWS Lambdas using Node.js and Express.</Item>
 
-      <div class="item">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17" fill="none">
-          <path d="M6.61692 16.2979L0 9.63128L2.94249 6.66667L6.61692 10.3792L16.9083 0L19.8507 2.96461L6.61692 16.2979Z" fill="#1572B6"/>
-        </svg>
-        <p>I worked with more than 80 Shopify Stores including Zumba, Mac-Center, Nestle, Cole Haan and Plant The Future.</p>
-      </div>
+      <Item>I worked with more than 80 Shopify Stores including Zumba, Mac-Center, Nestle, Cole Haan and Plant The Future.</Item>
     </div>
   </div>
 </template>
@@ -118,17 +102,6 @@
 
     .company {
       display: none;
-    }
-
-    .item {
-      display: grid;
-      grid-template-columns: 20px 1fr;
-      align-items: center;
-      gap: 40px;
-
-      p {
-        line-height: 24px;
-      }
     }
   }
 }
