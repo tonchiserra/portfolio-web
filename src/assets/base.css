@@ -40,6 +40,12 @@ body::-webkit-scrollbar {
   display: none;
 }
 
+p {
+  font-weight: 500;
+  color: var(--second-text-color);
+  font-size: 1.6rem;
+}
+
 h1 {
   font-family: var(--font-heading-family);
   line-height: 1;
@@ -59,6 +65,12 @@ h3 {
   font-family: var(--font-heading-family);
   line-height: 1;
   font-size: 4.8rem;
+}
+
+h4 {
+  font-family: var(--font-heading-family);
+  line-height: 1;
+  font-size: 2.4rem;
 }
 
 .button,
@@ -105,14 +117,24 @@ a.underline:hover {
   color: var(--third-color);
 }
 
+a.disabled {
+  pointer-events: none;
+  opacity: .5;
+  color: var(--gray-color-300);
+}
+
 .page-width {
   width: 100%;
   max-width: var(--content-width);
   margin: 0 auto;
 }
 
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 1000px) {
   .page-width {
     padding: 20px;
   }
+}
+
+.side-projects .splide__track {
+  padding-top: 140px !important;
 }

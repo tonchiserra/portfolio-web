@@ -1,5 +1,5 @@
 <template>
-  <section class="home-section">
+  <section id="Home" class="home-section">
     <div class="page-width home-container">
       <h1>Hey! I'm <span>Gonzalo</span></h1>
       <h2>Web Developer & Shopify Expert Dev</h2>
