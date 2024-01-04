@@ -1,0 +1,26 @@
+// UI Colors
+$main-color: var(--main-color);
+$second-color: var(--second-color);
+$third-color: var(--third-color);
+
+// Gray Colors
+$gray-color-100: var(--gray-color-100);
+$gray-color-200: var(--gray-color-200);
+$gray-color-300: var(--gray-color-300);
+
+// Texts
+$text-color: var(--text-color);
+$second-text-color: var(--second-text-color);
+$font-heading-family: var(--font-heading-family);
+$font-family: var(--font-family);
+
+// Screens
+$content-width: var(--content-width);
+$mobile-breakpoint: 680px;
+
+// Media Queries
+@mixin mobile-only {
+  @media (max-width: $mobile-breakpoint) {
+    @content;
+  }
+}

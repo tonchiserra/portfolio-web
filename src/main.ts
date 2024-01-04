@@ -1,7 +1,7 @@
 import { createApp } from 'vue'
-import './assets/base.css'
+import '@/assets/base.css'
 import '@splidejs/vue-splide/css'
-import App from './App.vue'
+import App from '@/App.vue'
 import VueSplide from '@splidejs/vue-splide'
 
 const app = createApp(App)

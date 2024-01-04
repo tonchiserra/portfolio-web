@@ -18,7 +18,7 @@
             <p>{{ project.description }}</p>
             <div class="buttons">
                 <a :href="project.demo" class="button" :class="!!project.demo ? '' : 'disabled'">Try it</a>
-                <a :href="project.repo" class="underline" :class="!!project.repo ? '' : 'disabled'">View code</a>
+                <a :href="project.repo" :class="!!project.repo ? '' : 'disabled'">View code</a>
             </div>
         </div>
     </SplideSlide>
@@ -29,15 +29,27 @@
     display: grid;
     grid-template-columns: 50% 50%;
     border-radius: 10px;
-    border: 1px solid var(--gray-color-100);
+    border: 1px solid $gray-color-100;
     transition: all 300ms ease;
+
+    @include mobile-only{
+        grid-template-columns: 100%;
+    }
 
     &.is-active {
         transform: translateY(-100px);
+
+        @include mobile-only {
+            transform: unset;
+        }
     }
 
     .image-container {
-        background-color: var(--second-color);
+        background-color: $second-color;
+
+        @include mobile-only {
+            height: 250px;
+        }
 
         img {
             transition: all 300ms ease;
@@ -56,6 +68,10 @@
         gap: 20px;
         padding: 40px 20px;
 
+        @include mobile-only {
+            padding: 20px 20px 30px;
+        }
+
         p {
             font-size: 1.6rem;
             line-height: 2.4rem;
@@ -69,7 +85,7 @@
             span {
                 font-size: 1.2rem;
                 font-weight: 600;
-                color: var(--second-text-color);
+                color: $second-text-color;
             }
         }
 
@@ -81,10 +97,10 @@
             gap: 20px;
 
             .button {
-                color: var(--main-color);
+                color: $main-color;
 
                 &:hover {
-                    color: var(--text-color);
+                    color: $text-color;
                 }
             }
         }

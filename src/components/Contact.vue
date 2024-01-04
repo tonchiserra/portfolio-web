@@ -5,14 +5,14 @@
 
       <div class="email">
         <p class="message">Start by saying hi</p>
-        <a href="mailto:serragonzalo1@gmail.com" class="underline">serragonzalo1@gmail.com</a>
+        <a href="mailto:serragonzalo1@gmail.com">serragonzalo1@gmail.com</a>
       </div>
 
       <div class="social-networks">
-        <a href="https://www.linkedin.com/in/serragonzalo/" target="_blank">LinkedIn</a>
-        <a href="https://github.com/tonchiserra" target="_blank">GitHub</a>
-        <a href="https://twitter.com/tonchiserra" target="_blank">Twitter / X</a>
-        <a href="https://www.instagram.com/tonchiserra/" target="_blank">Instagram</a>
+        <a href="https://www.linkedin.com/in/serragonzalo/" target="_blank" class="alternative">LinkedIn</a>
+        <a href="https://github.com/tonchiserra" target="_blank" class="alternative">GitHub</a>
+        <a href="https://twitter.com/tonchiserra" target="_blank" class="alternative">Twitter / X</a>
+        <a href="https://www.instagram.com/tonchiserra/" target="_blank" class="alternative">Instagram</a>
       </div>
     </div>
 
@@ -43,7 +43,7 @@
       text-align: center;
 
       span {
-        color: var(--main-color);
+        color: $main-color;
       }
     }
 
@@ -54,7 +54,7 @@
       gap: 10px;
 
       .message {
-        color: var(--text-color);
+        color: $text-color;
         font-size: 32px;
         font-weight: 400;
       }
@@ -66,11 +66,14 @@
       align-items: center;
       gap: 40px;
 
+      @include mobile-only {
+        gap: 20px;
+      }
     }
   }
 
   .footer-container {
-    border-top: 1px solid var(--gray-color-300);
+    border-top: 1px solid $gray-color-200;
     position: absolute;
     bottom: 0;
     left: 0;

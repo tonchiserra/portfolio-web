@@ -5,6 +5,7 @@
   --second-color: #F2F9FF;
   --third-color: #B9DCFF;
   --gray-color-100: #f4f4f4;
+  --gray-color-200: #e4e4e4;
   --gray-color-300: #c4c4c4;
   --text-color: #222;
   --second-text-color: #444;
@@ -20,6 +21,7 @@ html {
   font-size: 10px;
   color: var(--text-color);
   scroll-behavior: smooth;
+  font-variant-numeric: lining-nums proportional-nums;
 }
 
 *,
@@ -78,7 +80,7 @@ h4 {
 button {
   cursor: pointer;
   position: relative;
-  font-weight: bold;
+  font-weight: 600;
   font-size: 1.6rem;
   display: flex;
   align-items: center;
@@ -89,6 +91,11 @@ button {
   box-shadow: 0px 4px 16px 0px rgba(34, 34, 34, 0.10);
   background: #fff;
   border: none;
+  color: var(--main-color);
+}
+
+.button:hover {
+  transform: scale(1.05);
 }
 
 button.transparent {
@@ -99,23 +106,42 @@ button.transparent {
 
 a {
   text-decoration: none;
-  color: var(--text-color);
+  color: var(--main-color);
   transition: all 300ms ease;
   font-size: 1.6rem;
   font-weight: 600;
+  position: relative;
 }
 
 a:hover {
-  color: var(--main-color);
+  color: var(--text-color);
 }
 
-a.underline {
-  color: var(--main-color);
-  text-decoration: underline;
+a:not(.button):not(.logotype)::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 18px;
+  height: 2px;
+  width: 0%;
+  background-color: var(--text-color);
+  transition: all 300ms ease;
 }
 
-a.underline:hover {
-  color: var(--third-color);
+a:not(.button):not(.logotype):hover::after {
+  width: 100%;
+}
+
+a.alternative {
+  color: var(--text-color);
+}
+
+a.alternative:not(.button):not(.logotype)::after {
+  background-color: var(--main-color);
+}
+
+a.alternative:hover {
+  color: var(--main-color);
 }
 
 a.disabled {
@@ -132,10 +158,6 @@ a.disabled {
 
 @media screen and (max-width: 1200px) {
   .page-width {
-    padding: 20px;
+    padding: 0 20px;
   }
-}
-
-.side-projects .splide__track {
-  padding-top: 160px !important;
 }

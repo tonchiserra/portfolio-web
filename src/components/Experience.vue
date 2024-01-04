@@ -60,7 +60,7 @@ let splideProjectsOptions = {
 
     <div class="title page-width">
       <h3>Projects & Contributions</h3>
-      <a href="https://github.com/tonchiserra" class="underline">View all my repositories</a>
+      <a href="https://github.com/tonchiserra" target="_blank">View all my repositories</a>
     </div>
     <div class="side-projects">
       <Splide :has-track="false" :options="splideProjectsOptions" class="slide-projects" aria-label="Projects & contributions">
@@ -89,6 +89,10 @@ let splideProjectsOptions = {
 .experience-section {
   padding-bottom: 90px;
 
+  @include mobile-only {
+    padding-bottom: 120px;
+  }
+
   .experience-container {
     display: flex;
     flex-direction: column;
@@ -104,6 +108,13 @@ let splideProjectsOptions = {
     align-items: flex-end;
     justify-content: space-between;
     width: 100%;
+
+    @include mobile-only {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 20px;
+    }
 
     a {
       margin-bottom: 5px;
@@ -124,6 +135,10 @@ let splideProjectsOptions = {
     transform: unset;
     transition: all 300ms ease;
 
+    @include mobile-only {
+      bottom: -80px;
+    }
+
     &:hover {
       transform: scale(1.2);
     }
@@ -139,6 +154,14 @@ let splideProjectsOptions = {
     svg {
       width: 24px;
       height: 24px;
+    }
+  }
+
+  .side-projects .splide__track {
+    padding-top: 160px;
+
+    @include mobile-only {
+      padding-top: 60px;
     }
   }
 }

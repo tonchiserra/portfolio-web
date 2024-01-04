@@ -1,3 +1,13 @@
+<script lang="ts">
+document.addEventListener("scroll", () => {
+  const header = document.querySelector<HTMLElement>("header")
+  if(!header) return
+
+  const scrollPosition = window.scrollY
+  scrollPosition > 65 ? header.classList.add("scroll") : header.classList.remove("scroll")
+});
+</script>
+
 <template>
   <header>
     <div class="page-width header-container">
@@ -13,10 +23,10 @@
         </form>
         <nav class="main-menu">
           <ul>
-            <li><a href="#Home">HOME</a></li>
-            <li><a href="#Experience">EXPERIENCE</a></li>
-            <li><a href="#AboutMe">ABOUT ME</a></li>
-            <li><a href="#Contact">CONTACT</a></li>
+            <li><a class="alternative" href="#Home" onclick="menu.close()">HOME</a></li>
+            <li><a class="alternative" href="#Experience" onclick="menu.close()">EXPERIENCE</a></li>
+            <li><a class="alternative" href="#AboutMe" onclick="menu.close()">ABOUT ME</a></li>
+            <li><a class="alternative" href="#Contact" onclick="menu.close()">CONTACT</a></li>
           </ul>
         </nav>
       </dialog>
@@ -34,12 +44,16 @@
 
 <style scoped lang="scss">
 header {
-  background-color: var(--second-color);
+  background-color: $second-color;
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   z-index: 3;
+
+  &.scroll {
+    border-bottom: 1px solid $gray-color-200;
+  }
 
   .menu-btn {
     display: none;
@@ -49,7 +63,7 @@ header {
       transform: scale(1.2);
     }
 
-    @media screen and (max-width: 680px) {
+    @include mobile-only {
       display: block;
     }
   }
@@ -60,7 +74,7 @@ header {
     background: unset;
     border: unset;
   
-    @media screen and (max-width: 680px) {
+    @include mobile-only {
       border: unset;
       width: 70dvw;
       height: 100%;
@@ -70,6 +84,13 @@ header {
       animation: modal 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86) both alternate;
       max-height: unset;
       transform: translateX(75vw);
+      position: fixed;
+      background-color: #fff;
+      display: none;
+
+      &[open] {
+        display: block;
+      }
 
       nav ul {
         flex-direction: column;
@@ -103,7 +124,7 @@ header {
 
   .logotype {
     font-size: 4rem;
-    color: var(--main-color);
+    color: $main-color;
     font-weight: 700;
 
     &:hover {
@@ -114,7 +135,7 @@ header {
   .button {
     display: flex;
 
-    @media screen and (max-width: 680px) {
+    @include mobile-only {
       display: none;
     }
   }

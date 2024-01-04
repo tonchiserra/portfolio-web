@@ -13,13 +13,13 @@
 
 <style scoped lang="scss">
 .home-section {
-  background-color: var(--second-color);
+  background-color: $second-color;
 
   .home-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: flex-end;
     min-height: 100dvh;
     position: relative;
     text-align: center;
@@ -28,7 +28,7 @@
       display: none;
       margin-top: 60px;
 
-      @media screen and (max-width: 680px) {
+      @include mobile-only {
         display: flex;
       }
     }
@@ -36,7 +36,7 @@
     h1 {
       margin-top: 110px;
 
-      @media screen and (max-width: 680px) {
+      @include mobile-only {
         font-size: 5rem;
 
         span {
@@ -45,27 +45,23 @@
       }
 
       span {
-        color: var(--main-color);
+        color: $main-color;
       }
     }
 
     h2 {
       margin-top: 20px;
 
-      @media screen and (max-width: 680px) {
+      @include mobile-only {
         font-size: 2.8rem;
         margin-top: 30px;
       }
     }
 
     img {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      margin: 0 auto;
-
-      @media screen and (max-width: 680px) {
+      margin-top: 100px;
+      
+      @include mobile-only {
         width: calc(100dvw - 40px);
       }
     }

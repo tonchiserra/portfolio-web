@@ -77,7 +77,7 @@ import Item from "./Item.vue";
         left: -3px;
         bottom: 0;
         top: 0;
-        border-right: 6px dashed var(--gray-color-300);
+        border-right: 6px dashed $gray-color-300;
       }
     }
 
@@ -106,7 +106,7 @@ import Item from "./Item.vue";
   }
 }
 
-@media screen and (max-width: 680px) {
+@include mobile-only {
   .experience-snippet {
     grid-template-columns: 50px 1fr;
     gap: 20px;

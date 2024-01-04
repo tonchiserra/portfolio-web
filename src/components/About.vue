@@ -44,7 +44,7 @@ import Item from "./Item.vue";
 
 <style scoped lang="scss">
   .about-section{
-    background-color: var(--second-color);
+    background-color: $second-color;
     padding-top: 90px;
     padding-bottom: 90px;
     min-height: 100dvh;
@@ -55,6 +55,10 @@ import Item from "./Item.vue";
       display: grid;
       grid-template-columns: 1fr 50%;
       gap: 120px;
+
+      @include mobile-only {
+        grid-template-columns: 1fr;
+      }
 
       h3 {
         padding-bottom: 60px;
@@ -71,13 +75,13 @@ import Item from "./Item.vue";
         flex-direction: row;
         align-items: center;
         justify-content: flex-start;
+        flex-wrap: wrap;
         gap: 40px;
         margin-top: 60px;
 
         h3 {
-          color: var(--main-color);
+          color: $main-color;
           padding: 0;
-          font-variant-numeric: lining-nums proportional-nums;
         }
 
         p {
