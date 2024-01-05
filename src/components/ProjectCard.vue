@@ -29,8 +29,9 @@
     display: grid;
     grid-template-columns: 50% 50%;
     border-radius: 10px;
-    border: 1px solid $gray-color-100;
+    border: 1px solid $gray-color-200;
     transition: all 300ms ease;
+    overflow: hidden;
 
     @include mobile-only{
         grid-template-columns: 100%;
@@ -46,18 +47,26 @@
 
     .image-container {
         background-color: $second-color;
+        overflow: hidden;
+        border-right: 1px solid $gray-color-200;
 
         @include mobile-only {
             height: 250px;
+            border-bottom: 1px solid $gray-color-200;
+            border-right: none;
         }
 
         img {
             transition: all 300ms ease;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center center;
         }
 
         &:hover {
             img {
-                transform: scale(1.2);
+                transform: scale(1.05);
             }
         }
     }
@@ -66,7 +75,7 @@
         display: flex;
         flex-direction: column;
         gap: 20px;
-        padding: 40px 20px;
+        padding: 40px 30px;
 
         @include mobile-only {
             padding: 20px 20px 30px;

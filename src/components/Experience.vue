@@ -12,16 +12,43 @@ const projects: IProject[] = [
     technologies: ["shopify", "javascript", "vue", "sass", "css", "html"],
     repo: "",
     demo: "https://valeryaccesorios.com.ar/",
-    image: ""
+    image: "/experience/valery-accesorios.png"
   },
   {
-    title: "Mac Center",
-    subtitle: "Contribution - Innovate Group",
-    description: "I developed differents features and fix some issues in the Mac Center store. This is a Premium Partner Reseller of Apple, is a big store with multiples shops at Colombia, Perú, Panamá and República Dominicana.",
-    technologies: ["shopify", "javascript", "vue", "sass", "css", "html"],
-    repo: "https://mac-center.com/",
+    title: "Desafío Innovate 1",
+    subtitle: "Challenge - Innovate Group",
+    description: "I developed a landing page like a Shopify Store using only HTML and CSS. The challenge was to make the page responsive.",
+    technologies: ["html", "css"],
+    repo: "https://github.com/tonchiserra/desafio-innovate-1",
+    demo: "https://tonchiserra.github.io/desafio-innovate-1",
+    image: "/experience/desafio-innovate-1.png"
+  },
+  {
+    title: "Desafío Innovate 2",
+    subtitle: "Challenge - Innovate Group",
+    description: "I developed a collection page like a Shopify Store collection using only HTML, CSS and JavaScript. The challenge was to make an infinite scroll and manage products, variants and options.",
+    technologies: ["html", "css", "javascript"],
+    repo: "https://github.com/tonchiserra/desafio-innovate-2",
+    demo: "https://tonchiserra.github.io/desafio-innovate-2",
+    image: "/experience/desafio-innovate-2.png"
+  },
+  {
+    title: "Services TP DSW",
+    subtitle: "Project - National Technological University",
+    description: "TP fullstack of the Software Development subject of the Information Systems Engineering degree at the UTN FRRo. The system is a social network for contracting services.",
+    technologies: ["mongodb", "express", "nodejs", "angular", "typescript", "sass", "css", "html"],
+    repo: "https://github.com/tonchiserra/services-tp-dsw",
     demo: "",
-    image: ""
+    image: "/experience/services-tp-dsw.png"
+  },
+  {
+    title: "Weather App",
+    subtitle: "Side project",
+    description: "A simple weather app that shows the current weather and the forecast.",
+    technologies: ["react", "javascript", "css", "html"],
+    repo: "https://github.com/tonchiserra/weather-app",
+    demo: "https://gserra-weather.netlify.app/",
+    image: "/experience/weather-app.png"
   }
 ]
 
