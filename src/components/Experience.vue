@@ -60,7 +60,7 @@ let splideProjectsOptions = {
 
     <div class="title page-width">
       <h3>Projects & Contributions</h3>
-      <a href="https://github.com/tonchiserra" target="_blank">View all my repositories</a>
+      <a href="https://github.com/tonchiserra?tab=repositories" target="_blank">View all my repositories</a>
     </div>
     <div class="side-projects">
       <Splide :has-track="false" :options="splideProjectsOptions" class="slide-projects" aria-label="Projects & contributions">

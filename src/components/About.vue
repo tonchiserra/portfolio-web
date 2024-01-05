@@ -8,19 +8,21 @@ import Item from "./Item.vue";
       <div class="left">
         <h3>Who am I?</h3>
         <p>
-          My name is Gonzalo but you can call me Tonchi. From Totoras, Santa Fe, Argentina, I'm 22 years old and passionate about the IT world.
+          My name is Gonzalo but you can call me Tonchi. From Totoras, Santa Fe, Argentina, I'm <strong>22 years</strong> old and passionate about the IT world.
           <br><br>
-          In 2019 I started to study Systems Engineering at National Technological University but in 2023 I realized that university is not for me, I prefeer self-taught learning. So, this is how I focus on learning and improving my skills as a web developer.
+          In 2019 I started to study Systems Engineering at National Technological University but in 2023 I realized that university is not for me, I prefeer <strong>self-taught learning</strong>. So, this is how I focus on learning and improving my skills as a <strong>Web Developer</strong>.
+          <br><br>
+          Two years ago, in 2022, I discovered <strong>Shopify</strong> and its potential. I was caught by the satisfaction I got from seeing how companies grew and increased their sales thanks to the changes and features that my team and I developed. Since then, I work as Shopify Developer and <strong>I'm always looking for new challenges</strong>.
         </p>
       </div>
       
       <div class="right">
         <h3>What can i do?</h3>
         <div class="items">
-          <Item>Develop awesome sections and features that will take your store to the next level.</Item>
-          <Item>Give support to Shopify stores using Liquid.</Item>
-          <Item>Develop full-stack web applications with HTML, CSS/Sass, Javascript, Vue.js and NodeJS.</Item>
-          <Item>Design systems applying MVC pattern and Vertical Slice architecture.</Item>
+          <Item>Develop awesome sections and features that will <strong>take your store to the next level.</strong></Item>
+          <Item>Give support to Shopify stores using <strong>Liquid</strong>.</Item>
+          <Item>Develop full-stack web applications with <strong>HTML</strong>, <strong>CSS/Sass</strong>, <strong>TypeScript</strong>, <strong>Vue.js</strong> and <strong>NodeJS</strong>.</Item>
+          <Item>Design systems applying <strong>MVC pattern</strong> and <strong>Vertical Slice architecture</strong>.</Item>
         </div>
 
         <div class="numbers">
