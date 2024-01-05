@@ -1,4 +1,5 @@
 declare module '@splidejs/vue-splide' {
-    const VueSplide: any;
-    export default VueSplide;
+    export const VueSplide: any;
+    export const Splide: any;
+    export const SplideTrack: any;
 }
