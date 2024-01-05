@@ -1,4 +1,4 @@
-<script lang="ts">
+<script setup lang="ts">
 document.addEventListener("scroll", () => {
   const header = document.querySelector<HTMLElement>("header")
   if(!header) return
